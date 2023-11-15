@@ -33,13 +33,10 @@ GPT도 이번 에러는 해결해주지않았다.
 
 예시)
 
-````tsx
-```typescriptreact
-  const [writeDate, setWriteDate] = useState<string>();
+```tsx
+const [writeDate, setWriteDate] = useState<string>();
 
-  useEffect(() => {
-    setWriteDate(moment(date).format('MMM. D, YYYY - HH:mm'));
-  }, [date]);
-
+useEffect(() => {
+  setWriteDate(moment(date).format('MMM. D, YYYY - HH:mm'));
+}, [date]);
 ```
-````
