@@ -11,3 +11,4 @@
 * [기타 라이브러리](undefined-4/README.md)
   * [Next-intl (다국어 라이브러리)](undefined-4/next-intl/README.md)
     * [설치 및 세팅](undefined-4/next-intl/undefined.md)
+    * [MeataData에서 사용하기](undefined-4/next-intl/meatadata.md)
