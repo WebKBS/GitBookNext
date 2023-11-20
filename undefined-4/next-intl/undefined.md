@@ -183,3 +183,16 @@ useTranslations의 인수는 미리 설정한 json 파일에서 일치하는 Key
 
 반드시 언어별로  key는 매칭을 해줘야한다.
 
+<figure><img src="../../.gitbook/assets/Image 196.png" alt=""><figcaption></figcaption></figure>
+
+위와 같이 json을 설정하면 Key와 값을 사용할수 있다.
+
+<figure><img src="../../.gitbook/assets/Image 197.png" alt=""><figcaption></figcaption></figure>
+
+localhost:3000/ko 에 텍스트가 출력되는걸 확인할 수 있다.
+
+
+
+각 페이지마다 다국어 번역이 필요한곳은 useTranslations를 사용해서 언어를 호출할 수 있다.
+
+기본적인 사용법은 여기서 끝.
