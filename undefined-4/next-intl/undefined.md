@@ -48,6 +48,19 @@ messages 폴더에 json파일은 실제 텍스트가 번역될 공간이다. 각
 
 다국어 번역될 json 파일이다.
 
+{% hint style="info" %}
+만약 번역해야될 파일이 3가지라면 3개의 json 파일이 필요하다.
+
+웹사이트 텍스트를 json에서 가져오기 때문이다.
+
+\* json 파일의 값을 제외 한 Key의 구조는 무조건 같아야 한다.
+
+ex) message/en.json\
+&#x20;    message/ko.json
+
+&#x20;    . . .
+{% endhint %}
+
 
 
 ### next.config.js
