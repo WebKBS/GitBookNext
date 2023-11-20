@@ -124,3 +124,62 @@ layout.tsx와 page.tsx, globals.css 파일을 \[locale] 폴더 안으로 이동 
 
 [https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes)
 {% endhint %}
+
+
+
+## 4. layout.tsx 파일 설정
+
+```tsx
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { notFound } from 'next/navigation';
+
+const locales = ['en', 'ru', 'ko']; // 사용할 언어 * 반드시 일치시켜야한다.
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = { // meatadata
+  title: '타이틀',
+  description: 'Description',
+};
+
+export default function LocaleLayout({
+  children,
+  params: { locale }, //다이나믹 라우트의 params
+}: {
+  children: React.ReactNode;
+  params: { locale: any };
+}) {
+  // 만약 locales(해당하는 언어)가 없다면 notFound 호출
+  if (!locales.includes(locale as any)) notFound();
+
+  return (
+    <html lang={locale}> // locale 변수를 lang에 사용
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
+}
+```
+
+공식 홈페이지와 내용이 조금 다른데 사용하는 방법에 대한 로직은 같다.
+
+
+
+## 5. 각  page에서 사용방법.
+
+```tsx
+import { useTranslations } from 'next-intl';
+
+export default function Home() {
+  const t = useTranslations('Home');
+  return <h1>{t('title')}</h1>;
+}
+```
+
+useTranslations 함수를 import해서 t라는 변수로 사용한다.
+
+useTranslations의 인수는 미리 설정한 json 파일에서 일치하는 Key이다.\
+만약 Key를 인식하지 못하면 termnal 콘솔에서 에러 메세지를 출력하며. 이상한? 텍스트가 출력된다.
+
+반드시 언어별로  key는 매칭을 해줘야한다.
+
