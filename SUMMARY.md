@@ -13,3 +13,4 @@
     * [설치 및 세팅](undefined-4/next-intl/undefined.md)
     * [사용방법](undefined-4/next-intl/undefined-1.md)
     * [MeataData에서 사용하기](undefined-4/next-intl/meatadata.md)
+    * [라우팅 (Link)](undefined-4/next-intl/link.md)
