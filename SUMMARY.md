@@ -8,6 +8,7 @@
 * [MetaData](metadata.md)
 * [Error 해결집](error/README.md)
   * [Minified React error](error/minified-react-error.md)
+  * [API 호출 Client CORS](error/api-client-cors.md)
 * [기타 라이브러리](undefined-4/README.md)
   * [Next-intl (다국어 라이브러리)](undefined-4/next-intl/README.md)
     * [설치 및 세팅](undefined-4/next-intl/undefined.md)
