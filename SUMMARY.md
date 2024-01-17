@@ -15,3 +15,4 @@
     * [사용방법](undefined-4/next-intl/undefined-1.md)
     * [MeataData에서 사용하기](undefined-4/next-intl/meatadata.md)
     * [라우팅 (Link)](undefined-4/next-intl/link.md)
+* [프론트엔드 강범수](https://dev-k.gitbook.io/main/)
